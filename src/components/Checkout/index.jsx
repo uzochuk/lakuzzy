@@ -186,13 +186,14 @@ const Checkout = ({basketData, handleCheckout, orderError, orderInfo}) => {
             </div>
          
         )
+        
     } 
     return (
         <div className='checkout'>
             {/* {console.log(checkoutData)} */}
             <Container>   
                 <Paper className='paper' elevation={5}>
-                    <Typography align='center' variant='h5' gutterBottom color='secondary'>
+                    <Typography align='center' variant='h5' gutterBottom color='primary'>
                         Checkout
                     </Typography>
                     {renderRelatedComponent({

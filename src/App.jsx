@@ -62,6 +62,7 @@ function App() {
                 (error.data && error.data.error && error.data.error.message) ||
                 'An error occured.'
             ) 
+            // console.log(error)
         }
     }
 

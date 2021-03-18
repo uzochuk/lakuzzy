@@ -15,9 +15,9 @@ const Confirmation = ({orderInfo, orderError})=> {
     )}else{
         return(
             <div className='confirmation'>
-                <Typography variant='h5' color='primary'>
-                    {/* Thank you {orderInfo.customer.firstname} {orderInfo.customer.lastname}{''} for your purchase.  */}
-                    Thank you for your purchase
+                
+                <Typography variant='body1' color='secondary'>
+                    Thank you for your purchase.
                 </Typography>
                 <Button component={Link} variant='contained' type='button' to='/'>
                     continue shopping
