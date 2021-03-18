@@ -1,0 +1,54 @@
+.MuiAppBar-colorPrimary.custom-navbar{
+    background-color: pink;
+}
+
+.MuiAppBar-colorPrimary.custom-navbar > div > div{
+    padding: 0%;
+}
+
+.basket-wrapper{
+    flex-grow: 1;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.custom-navbar .custom-title{
+    display: flex;
+}
+
+.custom-navbar .custom-title .logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.basket-wrapper .custom-basket{
+    font-size: 35px;
+    color:palevioletred;
+}
+
+.basket-wrapper strong{
+    color:palevioletred;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .MuiAppBar-colorPrimary.custom-navbar{
+        background-color:lightblue;
+    }
+
+    
+    .custom-navbar .custom-title .logo{
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+    }
+
+    .basket-wrapper .custom-basket{
+        font-size: 40px;
+        color:black;
+    }
+
+
+  }
+  

@@ -1,0 +1,41 @@
+.banner{
+    padding-top: auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color:wheat;
+    background-image: linear-gradient(to bottom right, pink lightblue);
+}
+
+.banner > div > div {
+    align-items: center;
+}
+
+.banner .brand img{
+    width: 100%;
+    height: 100%;
+    border-radius: 40%;
+}
+
+.banner .title{
+    font-size: 45px;
+    margin-bottom: 20px;
+    font-family: fantasy;
+    color: black;
+}
+
+.banner a.shopping-button{
+    color:black;
+    background-color:lightblue;
+}
+
+.MuiTypography-root{
+    color: white;
+}
+
+@media (min-width: 800px){
+    .banner .title{
+        font-size: 65px;
+    }
+}

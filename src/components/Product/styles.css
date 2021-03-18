@@ -1,0 +1,144 @@
+.MuiCard-root.product-card{
+    background-color: pink;
+    color: beige;
+    transition: all 0.5s ease-in-out;
+}
+
+.MuiCard-root.product-card:hover{
+    transform:scale(1.05);
+}
+
+.product-card .content{
+    padding-bottom: 0;
+}
+
+.product-card .title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-card p{
+    color: beige;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-card .price{
+    margin-top: 10px;
+    color:whitesmoke
+}
+
+.product-card .custom-button{
+    width: 100%;
+    color: cyan;
+}
+
+
+.product-card .custom-button:hover{
+    background-color: cyan;
+    color: black;
+}
+
+.product-card .custom-button svg{
+    margin-right: 10px;
+}
+
+
+/* CUSTOM CARD */
+
+.MuiCard-root.custom-card{
+    background-color:pink ;
+    color: black;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 0px 1px 1px  black;
+}
+
+.MuiCard-root.custom-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px 5px black;
+}
+
+.custom-card .content{
+    padding-bottom: 0%;
+}
+
+.custom-card .title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.custom-card .card-image{
+    padding: 10px 10px 0 10px;
+}
+
+.custom-card p{
+    color: blanchedalmond;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.custom-card .price{
+    margin-top: 10px;
+    color:honeydew;
+}
+
+.custom-card .basket-item-price{
+    color: honeydew;
+    margin-bottom: 0%;
+}
+
+.actions-content{
+    display: flex;
+}
+
+.actions-content h2{
+    flex-grow: 1;
+}
+
+.custom-card .custom-button{
+    color:crimson
+}
+
+.custom-card .custom-button:hover{
+    background-color: palevioletred;
+    color: red;
+}
+
+.custom-card .custom-button svg{
+    margin-right: 10px;
+}
+
+.custom-card .increase-product-quantity{
+    color: rosybrown;
+    border-color: sienna;
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 50%;
+    margin-top:50%;
+    background-color:wheat;
+}
+
+.itemInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonSec{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    width: 100%;
+}
+
+
+
+

@@ -1,0 +1,146 @@
+#basket{
+    margin-top: 120px;
+    padding-bottom: 30px;
+}
+
+#basket .MuiButton-containSecondary{
+    color:black
+}
+
+.actions{
+    margin-top: 20px;
+}
+
+.actions a {
+    color: black;
+    margin-left: 15px;
+    background-color: cadetblue;
+}
+
+.actions a:hover{
+    background-color: skyblue;
+}
+
+ /* CUSTOM CARD */
+
+ .MuiCard-root.custom-card{
+     background-color: black;
+     color: grey;
+     transition: all 0.5s ease-in-out;
+ }
+
+ .MuiCard-root.custom-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 5px black;
+ }
+
+ .custom-card .content{
+     padding-bottom: 0%;
+ }
+
+ .custom-card .title{
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+}
+
+.custom-card .card-image{
+    padding:10px 10px 0 10px;
+}
+
+.custom-card p{
+    color: blanchedalmond;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.custom-card .price{
+    margin-top: 10px;
+    color: skyblue;
+}
+
+.custom-card .basket-item-price{
+    color: skyblue;
+    margin-bottom: 0;
+}
+
+.actions-content{
+    display: flex;
+}
+
+.actions-content h2{
+    flex-grow: 1;
+}
+
+.custom-card .custom-button{
+    color: skyblue;
+}
+
+
+.custom-card .custom-button:hover{
+    background-color: lightblue;
+    color: lightgray;
+}
+
+.custom-card .custom-button svg{
+    margin-right: 10px;
+}
+
+.custom-card .increase-product-quantity{
+    color:lightyellow;
+    border-color:blue
+}
+
+
+.custom-card .decrease-product-quantity{
+    color:lightyellow;
+    border-color:red
+}
+
+
+
+
+
+
+/* BASKET BANNER */
+
+.basket-banner{
+    padding-top: 150px;
+    width: 100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    background-color: slategray;
+    background-image: linear-gradient(to bottom right, black, grey);
+
+}
+
+.basket-banner > div > div{
+    align-items: center;
+}
+
+.basket-banner .brand{
+    display: flex;
+    align-items: center;
+}
+
+.basket-banner .brand svg{
+    width: 100%;
+    font-size: 220px;
+}
+
+.basket-banner .title{
+    font-size: 45px;
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.basket-banner a.shopping-button{
+    color:black;
+    background-color: cyan;
+}
+
+
+
+
