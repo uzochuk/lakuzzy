@@ -17,7 +17,7 @@ const Banner =()=> {
                         </Button>
                     </Grid>
                     <Grid className='brand' item sm={6}>
-                        <img src='/img3.jpg' alt=''></img>
+                        <img src='/img3.jpeg' alt=''></img>
                     </Grid>
                 </Grid>
             </Container>
