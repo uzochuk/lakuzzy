@@ -1,5 +1,6 @@
 .MuiAppBar-colorPrimary.custom-navbar{
     background-color: pink;
+    height: 42px;
 }
 
 .MuiAppBar-colorPrimary.custom-navbar > div > div{
@@ -18,12 +19,14 @@
 
 .custom-navbar .custom-title .logo{
     width: 40px;
-    height: 40px;
+    height: 39px;
     border-radius: 20px;
+    margin-top:-20px;
 }
 
 .basket-wrapper .custom-basket{
     font-size: 35px;
+    margin-top: -10px;
     color:palevioletred;
 }
 
@@ -35,6 +38,7 @@
 @media only screen and (min-width: 1024px) {
     .MuiAppBar-colorPrimary.custom-navbar{
         background-color:lightblue;
+        height:auto;
     }
 
     

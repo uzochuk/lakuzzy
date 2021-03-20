@@ -8,11 +8,11 @@ const Products = ({products, addProduct}) => {
         <div>
             <Banner></Banner>
             <Container id='products'>
-            <Grid container spacing={4}>
+            <Grid container spacing={1}>
             {
                 products.map((product)=>{
                     return(
-                        <Grid item xs={12} sm={6} md={4} key={product.id}>
+                        <Grid item xs={6} sm={6} md={4} key={product.id}>
                         <Product product={product} addProduct={addProduct}></Product>
                         </Grid>
                     )

@@ -18,9 +18,9 @@ function Navbar({basketItem, totalCost}) {
                         {
                             location.pathname === '/basket' ? (
                                 <div className='basket-wrapper'>
-                                    <h2>
+                                    <Typography variant='body1'>
                                         Total cost: <strong>{totalCost}</strong>
-                                    </h2>
+                                    </Typography>
                                 </div>
                             ):(
                                 <div className='basket-wrapper'>

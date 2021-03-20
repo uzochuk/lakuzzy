@@ -6,16 +6,27 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Basket from './components/Basket'
 import Checkout from './components/Checkout'
+import Errorpage from './components/Errorpage' 
+import BottomNav from './components/BottomNav'
+import Search from './components/Search'
+import About from './components/About'
+
 
 function App() {
     const [products, setProducts] = useState([])
     const [basketData, setBasketData] = useState({})
     const [orderInfo, setOrderInfo] = useState({})
     const [orderError, setOrderError] = useState('')
+    const [loadError, setloadError] = useState()
 
     const fetchProducts = async () =>{
-        const response = await commerce.products.list()
-        setProducts((response && response.data) || [])
+        try{
+             const response = await commerce.products.list()
+             setProducts((response && response.data) || [])
+            }catch(error){
+                setloadError(error)
+            }
+       
     }
 
     const fetchBasketData = async ()=>{
@@ -75,7 +86,14 @@ function App() {
     //console.log(basketData.total_items)
     return (
         <Router>
-            <div>
+          
+                { loadError ?
+                
+                <Errorpage loadError={loadError}/>
+               
+                :
+                <>
+                <div id='appContainer'>
                 <Navbar basketItem={basketData.total_unique_items} 
                 totalCost= {(basketData.subtotal && basketData.subtotal.formatted_with_symbol) || '0.00'}></Navbar>
                 <Switch>
@@ -99,10 +117,25 @@ function App() {
                             orderError={orderError}
                             orderInfo={orderInfo}>
                         </Checkout>
+                    </Route> 
+
+                    
+                    <Route  path='/search'>
+                        <Search  addProduct={addProduct}></Search>
+                    </Route>
+
+
+                    <Route  path='/about'>
+                        <About></About>
                     </Route>
                 </Switch>
                 <Footer></Footer>
-            </div>
+                <BottomNav></BottomNav>
+                </div>
+                </>
+                
+                }
+            
         </Router>
     )
 }

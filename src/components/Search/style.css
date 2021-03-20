@@ -1,0 +1,17 @@
+.rootDiv{
+    width: fit-content;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.searchBar{
+    margin-top: 90px;
+}
+
+.itemDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
