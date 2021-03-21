@@ -14,7 +14,7 @@
 
 .banner .brand img{
     width: '';
-    height:400px;
+    height:200px;
     
 }
 
@@ -38,4 +38,12 @@
     .banner .title{
         font-size: 65px;
     }
+
+    
+    .banner .brand img{
+    width: '';
+    height:400px;
+    
+}
+
 }
