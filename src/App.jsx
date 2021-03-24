@@ -10,6 +10,8 @@ import Errorpage from './components/Errorpage'
 import BottomNav from './components/BottomNav'
 import Search from './components/Search'
 import About from './components/About'
+import NavButton from './components/NavButton'
+const axios = require('axios');
 
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
     const [orderInfo, setOrderInfo] = useState({})
     const [orderError, setOrderError] = useState('')
     const [loadError, setloadError] = useState()
+    const [links, setLinks] = useState({})
 
     const fetchProducts = async () =>{
         try{
@@ -29,6 +32,36 @@ function App() {
        
     }
 
+    const nextPage=()=>{
+       
+        axios.get(links.next,  {
+            headers:{
+              'X-Authorization':process.env.REACT_APP_CHEC_PUBLIC_KEY
+            } 
+          }).then((response)=>{
+            setProducts(response.data.data)
+            setLinks(response.data.meta.pagination.links)
+           
+          })
+         
+    } 
+
+    const prevPage =()=>{
+      
+        axios.get(links.previous,  {
+            headers:{
+              'X-Authorization':process.env.REACT_APP_CHEC_PUBLIC_KEY
+            } 
+          }).then((response)=>{
+              setProducts(response.data.data)
+              setLinks(response.data.meta.pagination.links)
+            })
+      
+    }
+
+    const newLink = () =>{
+        commerce.products.list().then((response)=>setLinks(response.meta.pagination.links))
+    }
     const fetchBasketData = async ()=>{
         const response =await commerce.cart.retrieve()
         setBasketData(response)
@@ -80,13 +113,14 @@ function App() {
     useEffect(() => {
       fetchProducts()
       fetchBasketData()
-     
+      newLink()
     }, [])
 
     //console.log(basketData.total_items)
     return (
+       
         <Router>
-          
+           
                 { loadError ?
                 
                 <Errorpage loadError={loadError}/>
@@ -98,7 +132,7 @@ function App() {
                 totalCost= {(basketData.subtotal && basketData.subtotal.formatted_with_symbol) || '0.00'}></Navbar>
                 <Switch>
                     <Route exact path='/'>
-                        <Products products={products} addProduct={addProduct}></Products>
+                        <Products products={products} addProduct={addProduct} links={links}  nextPage={nextPage} prevPage={prevPage}></Products>
                     </Route>
 
                     <Route  path='/basket'>
@@ -128,6 +162,7 @@ function App() {
                     <Route  path='/about'>
                         <About></About>
                     </Route>
+                    <NavButton links={links}  nextPage={nextPage} prevPage={prevPage}></NavButton>
                 </Switch>
                 <Footer></Footer>
                 <BottomNav></BottomNav>

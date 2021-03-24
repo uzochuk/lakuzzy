@@ -44,6 +44,9 @@ const useStyles = makeStyles((theme) => ({
     flexWrap:'wrap',
     justifyContent:'space-evenly',
     width:'80%'
+  },
+  typo:{
+    color:'black'
   }
   
 }));
@@ -63,11 +66,11 @@ function About() {
             </ButtonBase>
           </Grid>
           <Grid item xs={12} sm container justify='center' >
-              <Typography color='primary' variant='h5'>
+              <h5 className='typo'>
                 "Hair does not a woman but good hair definately helps!"
-              </Typography>
+              </h5>
               <Typography variant='body1' color='secondary'>
-                <i>I'm an entreprenuer and a personal shopper based in the UK.I deal in women beauty products.</i>
+                <i>I'm an entreprenuer and a personal shopper based in the UK.I deal in  beauty products.</i>
               </Typography>
           </Grid>
         </Grid>
