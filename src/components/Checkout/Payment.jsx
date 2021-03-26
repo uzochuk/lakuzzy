@@ -2,7 +2,7 @@ import React from 'react'
 import{Button} from '@material-ui/core'
 import {Elements,CardElement,ElementsConsumer,}from '@stripe/react-stripe-js'
 import {loadStripe} from '@stripe/stripe-js'
-const stripePromise = loadStripe('pk_test_51IPtcbBKWYtupp6Qymw9SxoV62NMl57esCPGycX2KRwqVXcVMB1mdfFak6HyBOHdQax9fj878Na0YtEJTM9vAGiG00mDidhuSI')
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY)
 
 
 const Payment=({user,checkoutData,handleBackStep,handleNextStep, handleCheckout})=> {

@@ -67,7 +67,7 @@ function About() {
           </Grid>
           <Grid item xs={12} sm container justify='center' >
               <h5 className='typo'>
-                "Hair does not a woman but good hair definately helps!"
+                "Hair does not make a woman but good hair definately helps!"
               </h5>
               <Typography variant='body1' color='secondary'>
                 <i>I'm an entreprenuer and a personal shopper based in the UK.I deal in  beauty products.</i>
